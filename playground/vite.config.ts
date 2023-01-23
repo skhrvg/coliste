@@ -8,6 +8,9 @@ import eslintPlugin from 'vite-plugin-eslint'
 
 export default defineConfig({
   plugins: [vue(), eslintPlugin()],
+  server: {
+    open: true,
+  },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
