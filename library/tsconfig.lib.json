@@ -1,0 +1,9 @@
+{
+  "extends": [
+    "./tsconfig.json",
+    "@vue/tsconfig/tsconfig.lib.json"
+  ],
+  "compilerOptions": {
+    "outDir": "./dist"
+  }
+}

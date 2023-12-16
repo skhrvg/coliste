@@ -1,9 +1,8 @@
-// noinspection JSUnusedGlobalSymbols - suppresses "exported but not used" warning in WebStorm
-
-import { resolve } from 'path'
+import { resolve } from 'node:path'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
+// noinspection JSUnusedGlobalSymbols - suppresses "exported but not used" warning in WebStorm
 export default defineConfig({
   plugins: [
     vue(),

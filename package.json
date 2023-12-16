@@ -1,17 +1,24 @@
 {
   "name": "coliste",
+  "type": "module",
   "version": "0.0.0",
   "private": true,
-  "packageManager": "pnpm@7.25.1",
+  "packageManager": "pnpm@8.12.1",
   "scripts": {
     "dev": "run-p library:watch playground:dev",
     "library:watch": "pnpm --filter \"yourlib\" watch",
     "library:build": "pnpm --filter \"yourlib\" build",
     "library:publish": "pnpm --filter \"yourlib\" publish",
-    "playground:dev": "pnpm --filter \"playground\" dev"
+    "playground:dev": "pnpm --filter \"playground\" dev",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "devDependencies": {
-    "vue": "^3.0.0",
-    "npm-run-all": "^4.1.5"
+    "@antfu/eslint-config": "2.4.5",
+    "@types/node": "^18.19.3",
+    "eslint": "8.55.0",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^5.0.5",
+    "vue": "^3.3.12"
   }
 }

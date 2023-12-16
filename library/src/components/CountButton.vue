@@ -10,7 +10,9 @@ const props = withDefaults(defineProps<Props>(), {
   prefix: '',
   suffix: '',
 })
-const emit = defineEmits(['update:count'])
+const emit = defineEmits<{
+  'update:count': [count: number]
+}>()
 
 const countRef = ref(props.count)
 

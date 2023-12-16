@@ -2,16 +2,16 @@
 
 # coliste
 
-This is a starter template for creating a simple component library using [Vue3](https://vuejs.org/), 
+This is a starter template for creating a simple component library using [Vue3](https://vuejs.org/),
 [TypeScript](https://www.typescriptlang.org/), [pnpm](https://pnpm.io/), [Vite](https://vitejs.dev/)
 and [ESLint](https://eslint.org/) - most loved tools in the Vue community.
 
 ## Developer experience
-- You don't need to constantly rebuild the library manually to see the changes in the demo app (included playground 
+- You don't need to constantly rebuild the library manually to see the changes in the demo app (included playground
 package). This monorepo provides a single command to start both the library and the demo app in watch mode.
-- No need to use Prettier or any other code formatter. ESLint is [configured](https://github.com/antfu/eslint-config) 
+- No need to use Prettier or any other code formatter. ESLint is [configured](https://github.com/antfu/eslint-config)
 to fix all the code style issues automatically. Just enable `Run eslint --fix on save` in your IDE.
-- Disk space is not an issue. pnpm uses hard links to store the dependencies, so you don't need to download them every 
+- Disk space is not an issue. pnpm uses hard links to store the dependencies, so you don't need to download them every
 time.
 - Library is configured to provide IntelliSense for the components in the demo app and after publishing. You can
 see proper types for the props, events and slots.
@@ -60,11 +60,10 @@ see proper types for the props, events and slots.
 │   │   ├── components/         your components
 │   │   │   └── ...
 │   │   └── index.ts            library entry point
-│   ├── .eslintrc.cjs
 │   ├── env.d.ts
 │   ├── package.json            library package metadata
-│   ├── tsconfig.config.json
 │   ├── tsconfig.json
+│   ├── tsconfig.lib.json
 │   └── vite.config.ts
 ├── node_modules/
 │   └── ...
@@ -76,23 +75,23 @@ see proper types for the props, events and slots.
 │   │   │   └── main.css        demo app global styles
 │   │   ├── App.vue             play with your components here
 │   │   └── main.ts             demo app entry point
-│   ├── .eslintrc.cjs
 │   ├── env.d.ts
 │   ├── index.html
 │   ├── package.json
-│   ├── tsconfig.config.json
+│   ├── tsconfig.app.json
 │   ├── tsconfig.json
+│   ├── tsconfig.node.json
 │   └── vite.config.ts
 ├── .editorconfig
 ├── .gitignore
 ├── .npmrc
+├── eslint.config.js
 ├── LICENSE
 ├── package.json
 ├── pnpm-lock.yaml
 ├── pnpm-workspace.yaml
 └── README.md
 ```
-
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/) 2023-present Gleb Sakharov
