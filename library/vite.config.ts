@@ -1,18 +1,21 @@
 import { resolve } from 'node:path'
 import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
+import vuePlugin from '@vitejs/plugin-vue'
+import dtsPlugin from 'vite-plugin-dts'
 
 // noinspection JSUnusedGlobalSymbols - suppresses "exported but not used" warning in WebStorm
 export default defineConfig({
   plugins: [
-    vue(),
+    vuePlugin(),
+    dtsPlugin({
+      insertTypesEntry: true,
+    }),
   ],
   build: {
     lib: {
       entry: resolve(__dirname, './src/index.ts'),
       name: 'yourlib',
-      fileName: format => `yourlib.${format}.js`,
-      formats: ['es', 'umd'],
+      formats: ['es'],
     },
     rollupOptions: {
       external: ['vue'],

@@ -19,26 +19,21 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/yourlib.es.js",
-      "require": "./dist/yourlib.umd.js"
+      "import": "./dist/yourlib.js"
     },
     "./style.css": "./dist/style.css"
   },
-  "main": "./dist/yourlib.umd.js",
   "module": "./dist/yourlib.es.js",
   "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
-    "watch": "run-p build:clean build:vite:watch types:gen:watch",
-    "build": "run-s types:check build:clean build:vite types:gen",
-    "build:vite": "vite build",
-    "build:vite:watch": "vite build --watch",
-    "build:clean": "rimraf dist",
-    "types:check": "vue-tsc --build --force",
-    "types:gen": "vue-tsc --project tsconfig.lib.json",
-    "types:gen:watch": "vue-tsc --project tsconfig.lib.json --watch"
+    "watch": "vite build --watch",
+    "build": "run-p type-check build-only",
+    "build-only": "vite build",
+    "type-check": "vue-tsc --build --force",
+    "prepare": "pnpm run build"
   },
   "peerDependencies": {
     "vue": "^3.3.0"
@@ -48,6 +43,7 @@
     "@vue/tsconfig": "^0.5.0",
     "typescript": "~5.3.3",
     "vite": "^5.0.10",
+    "vite-plugin-dts": "^3.6.4",
     "vue-tsc": "^1.8.26"
   }
 }
