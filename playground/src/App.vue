@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { CountButton } from 'yourlib'
-import 'yourlib/style.css'
 import { ref } from 'vue'
 
 const count = ref(0)
