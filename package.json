@@ -11,7 +11,8 @@
     "library:publish": "pnpm --filter \"yourlib\" publish",
     "playground:dev": "pnpm --filter \"playground\" dev",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "type-check": "pnpm --filter \"*\" type-check"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.6.3",
