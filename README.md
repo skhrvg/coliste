@@ -63,7 +63,6 @@ see proper types for the props, events and slots.
 │   ├── env.d.ts
 │   ├── package.json            library package metadata
 │   ├── tsconfig.json
-│   ├── tsconfig.lib.json
 │   └── vite.config.ts
 ├── node_modules/
 │   └── ...
