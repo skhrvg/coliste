@@ -36,14 +36,14 @@
     "prepare": "pnpm run build"
   },
   "peerDependencies": {
-    "vue": "^3.3.0"
+    "vue": "^3.4.15"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^4.5.2",
-    "@vue/tsconfig": "^0.5.0",
+    "@vitejs/plugin-vue": "^5.0.3",
+    "@vue/tsconfig": "^0.5.1",
     "typescript": "~5.3.3",
-    "vite": "^5.0.10",
-    "vite-plugin-dts": "^3.6.4",
-    "vue-tsc": "^1.8.26"
+    "vite": "^5.0.12",
+    "vite-plugin-dts": "^3.7.2",
+    "vue-tsc": "^1.8.27"
   }
 }

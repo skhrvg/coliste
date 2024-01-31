@@ -1,3 +1,2 @@
-// noinspection JSUnusedGlobalSymbols - suppresses "exported but not used" warning in WebStorm
-
 export { default as CountButton } from './components/CountButton.vue'
+export type { CountButtonProps } from './components/CountButton.vue'

@@ -1,27 +1,19 @@
 <script setup lang="ts">
-import { ref, watch } from 'vue'
-
-export interface Props {
-  count: number
+export interface CountButtonProps {
   prefix?: string
   suffix?: string
 }
-const props = withDefaults(defineProps<Props>(), {
+
+const props = withDefaults(defineProps<CountButtonProps>(), {
   prefix: '',
   suffix: '',
 })
-const emit = defineEmits<{
-  'update:count': [count: number]
-}>()
 
-const countRef = ref(props.count)
-
-watch(countRef, value => emit('update:count', value))
-watch(props, ({ count }) => countRef.value = count, { deep: true })
+const count = defineModel<number>({ required: true })
 </script>
 
 <template>
-  <button @click="countRef++">
+  <button @click="count++">
     {{ `${props.prefix}${count}${props.suffix}` }}
   </button>
 </template>

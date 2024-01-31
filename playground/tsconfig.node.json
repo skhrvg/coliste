@@ -5,8 +5,7 @@
     "module": "ESNext",
     "moduleResolution": "Bundler",
     "types": ["node"],
-    "noEmit": true,
-    "outDir": "./node_modules/.cache/vue-tsbuildinfo"
+    "noEmit": true
   },
   "include": [
     "vite.config.*",
